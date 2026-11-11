@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Theme Switcher 🎨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">Saran No. 139</span>
+            <h1>🎨 MULTI-THEME SWITCHER</h1>
+            <p>Pilih skema warna favoritmu dan ubah suasana halaman web!</p>
+        </header>
+
+        <!-- Tema Switcher Buttons -->
+        <div class="theme-switcher-grid">
+            <button type="button" class="theme-btn light active" data-theme="light">☀️ Light</button>
+            <button type="button" class="theme-btn dark" data-theme="dark">🌙 Dark</button>
+            <button type="button" class="theme-btn ocean" data-theme="ocean">🌊 Ocean</button>
+            <button type="button" class="theme-btn forest" data-theme="forest">🌲 Forest</button>
+            <button type="button" class="theme-btn pastel" data-theme="pastel">🌸 Pastel</button>
+        </div>
+
+        <!-- Pratinjau Konten Kartu Interaktif -->
+        <main class="content-preview">
+            <div class="preview-box">
+                <h2>Selamat Datang, Kiki! 👋</h2>
+                <p>
+                    Saklar tema di atas menggunakan <strong>CSS Custom Properties</strong> dan JavaScript untuk mengganti palet warna secara instan. Pilihan tema terakhirmu juga akan disimpan otomatis di memori browser (*LocalStorage*).
+                </p>
+            </div>
+        </main>
+
+        <!-- Status Footer -->
+        <footer class="app-footer">
+            <span>Tema Aktif: <strong id="active-theme-name">Light Mode</strong></span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
