@@ -1,0 +1,184 @@
+/* --- DEFINISI SKEMA WARNA TEMA (CSS VARIABLES) --- */
+:root[data-theme="light"] {
+    --bg-main: #facc15;
+    --card-bg: #ffffff;
+    --stroke-dark: #0f172a;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --badge-bg: #c084fc;
+    --box-bg: #f8fafc;
+    --accent-btn: #facc15;
+}
+
+:root[data-theme="dark"] {
+    --bg-main: #0f172a;
+    --card-bg: #1e293b;
+    --stroke-dark: #f8fafc;
+    --text-dark: #f8fafc;
+    --text-muted: #94a3b8;
+    --badge-bg: #38bdf8;
+    --box-bg: #0f172a;
+    --accent-btn: #38bdf8;
+}
+
+:root[data-theme="ocean"] {
+    --bg-main: #38bdf8;
+    --card-bg: #e0f2fe;
+    --stroke-dark: #0369a1;
+    --text-dark: #0c4a6e;
+    --text-muted: #0284c7;
+    --badge-bg: #0ea5e9;
+    --box-bg: #ffffff;
+    --accent-btn: #38bdf8;
+}
+
+:root[data-theme="forest"] {
+    --bg-main: #4ade80;
+    --card-bg: #f0fdf4;
+    --stroke-dark: #166534;
+    --text-dark: #14532d;
+    --text-muted: #15803d;
+    --badge-bg: #22c55e;
+    --box-bg: #ffffff;
+    --accent-btn: #4ade80;
+}
+
+:root[data-theme="pastel"] {
+    --bg-main: #f472b6;
+    --card-bg: #fdf2f8;
+    --stroke-dark: #831843;
+    --text-dark: #500724;
+    --text-muted: #be185d;
+    --badge-bg: #ec4899;
+    --box-bg: #ffffff;
+    --accent-btn: #f472b6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- KARTU UTAMA WIDGET --- */
+.app-card {
+    background-color: var(--card-bg);
+    padding: 28px;
+    border-radius: 24px;
+    border: 4px solid var(--stroke-dark);
+    box-shadow: 10px 10px 0px var(--stroke-dark);
+    max-width: 460px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* --- HEADER --- */
+.app-header {
+    text-align: center;
+}
+
+.badge {
+    background-color: var(--badge-bg);
+    color: #ffffff;
+    border: 2px solid var(--stroke-dark);
+    padding: 4px 12px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.app-header h1 {
+    font-size: 1.35rem;
+    font-weight: 900;
+}
+
+.app-header p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* --- THEME SWITCHER GRID --- */
+.theme-switcher-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.theme-btn {
+    background-color: var(--box-bg);
+    color: var(--text-dark);
+    border: 3px solid var(--stroke-dark);
+    padding: 10px 6px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 0.78rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px var(--stroke-dark);
+    transition: all 0.15s ease;
+}
+
+.theme-btn.active {
+    background-color: var(--accent-btn);
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px var(--stroke-dark);
+}
+
+.theme-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px var(--stroke-dark);
+}
+
+/* --- CONTENT PREVIEW --- */
+.content-preview {
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-box {
+    background-color: var(--box-bg);
+    border: 3px solid var(--stroke-dark);
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 3px 3px 0px var(--stroke-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.preview-box h2 {
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+.preview-box p {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* --- FOOTER STATUS --- */
+.app-footer {
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: var(--text-muted);
+}
